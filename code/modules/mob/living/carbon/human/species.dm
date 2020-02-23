@@ -283,12 +283,14 @@
 
 	//If you wanted to add a species-level ability:
 	/*abilities = list(/client/proc/test_ability)*/
-		
-		name = "Felinid"
-	name_plural = "Felinids"
 	
+/datum/species/felinid	
+	name = "Felinid"
+	name_plural = "Felinids"
 	default_language = /datum/language/common
 	primitive = /mob/living/carbon/monkey/tajara
+	brute_mod = 1.5
+	burn_mod = 1.5
 	unarmed_type = /datum/unarmed_attack/claws
 	species_flags = HAS_SKIN_TONE|HAS_LIPS|HAS_UNDERWEAR
 	show_paygrade = TRUE
@@ -296,9 +298,15 @@
 	race_key = "human"
 	tail = "felinidtail"
 	ears = "felinidears"
-
-	screams = list("male" = "male_scream", "female" = "female_scream")
-	paincries = list("male" = "male_pain", "female" = "female_pain")
+	death_message = "seizes up awnd fawws wimp, theiw eyes dead awnd wifewess..."
+	
+	
+	screams = list(MALE = "male_scream", FEMALE = "female_scream")
+	paincries = list(MALE = "male_pain", FEMALE = "female_pain")
+	goredcries = list(MALE = "male_gored", FEMALE = "female_gored")
+	gasps = list(MALE = "male_gasp", FEMALE = "female_gasp")
+	coughs = list(MALE = "male_cough", FEMALE = "female_cough")
+	burstscreams = list(MALE = "male_preburst", FEMALE = "female_preburst")
 
 //Slightly tougher humans.
 /datum/species/human/hero
